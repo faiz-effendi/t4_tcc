@@ -1,7 +1,7 @@
 import { Sequelize } from "sequelize"
 
-const dbContent = new Sequelize("tugas1_tcc_notes", "root", "", {
-  host: "localhost",
+const dbContent = new Sequelize("t2_notes_123220139", "root", "", {
+  host: "34.70.179.84",
   dialect: "mysql"
 });
 

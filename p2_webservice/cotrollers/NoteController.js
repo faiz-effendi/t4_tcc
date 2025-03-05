@@ -75,7 +75,7 @@ const updateNote = async(req, res) => {
     const { id } = req.params;
     const { owner, title, contain } = req.body;
 
-    if(!owner || !id) {
+    if(!id) {
       return res.status(400).json({ msg: "Owner or ID is empty!" })
     };
 
@@ -90,7 +90,7 @@ const updateNote = async(req, res) => {
     };
 
     const newData = {
-      title: title || existingData.owner,
+      owner: owner || existingData.owner,
       title: title || existingData.title,
       contain: contain || existingData.contain
     };
@@ -109,7 +109,7 @@ const updateNote = async(req, res) => {
 
 const deleteNote = async(req, res) => {
   try {
-    const { id } = req.params ?? res.status(400).json({ msg: "Owner or ID is empty!" });
+    const { id } = req.params ?? res.status(400).json({ msg: "ID is empty!" });
 
     const del = await Notes.destroy({
       where: {
@@ -118,9 +118,9 @@ const deleteNote = async(req, res) => {
     });
     
     if(!del) {
-      return res.status(404).json({ msg: "Owner or ID not found!" }) 
+      return res.status(404).json({ msg: "ID not found!" }) 
     };
-    
+
     res.status(200).json({ msg: "Successfully deleted!" });
   } catch(error) {
     res.status(400).json({ msg: "Error delete!" });

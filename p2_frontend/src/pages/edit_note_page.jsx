@@ -16,7 +16,7 @@ function EditNote() {
   useEffect(() => {
     const fetchNote = async () => {
       await axios
-        .get(`http://35.224.17.65:3001/notes/id/${id}`)
+        .get(`/api/notes/id/${id}`)
         .then((result) => {
           setFormData({
             owner: result.data[0].owner,
@@ -41,7 +41,7 @@ function EditNote() {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent page reload
     await axios
-      .put(`http://35.224.17.65:3001/notes/${id}`, formData)
+      .put(`/api/notes/${id}`, formData)
       .then((response) => {
         setResponse(response.data);
         console.log("Success:", response.data);

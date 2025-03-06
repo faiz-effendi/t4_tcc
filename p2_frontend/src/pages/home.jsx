@@ -10,7 +10,7 @@ function Home() {
 
   const fetchNotes = async () => {
     await axios
-      .get(`http://35.224.17.65:3001/notes${search ? `/${search}` : ""}`)
+      .get(`/api/notes${search ? `/${search}` : ""}`)
       .then((response) => {
         setNotes(response.data);
       })
@@ -30,7 +30,7 @@ function Home() {
 
   const handleDelete = async (noteId) => {
     await axios
-      .delete(`http://35.224.17.65:3001/notes${noteId ? `/${noteId}` : ""}`)
+      .delete(`/api/notes${noteId ? `/${noteId}` : ""}`)
       .then((response) => {
         setAlertMessage(`Successfully deleted note`);
         setShowAlert(true);

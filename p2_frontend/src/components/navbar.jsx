@@ -4,16 +4,16 @@ function NavBar({ search, setSearch }) {
   const navigate = useNavigate();
 
   return (
-    <nav className='flex items-center justify-center h-16 bg-gray-100 shadow-lg z-10 fixed top-0 left-0 w-full'>
+    <nav className='flex items-center justify-center py-4 bg-gray-100 shadow-lg z-10 fixed top-0 left-0 w-full'>
       <div className='flex justify-between items-center w-full mx-10'>
-        <h1 className='text-2xl font-bold text-gray-600'>MyNotes</h1>
+        <h1 className='text-2xl font-bold text-gray-600 md:inline sm:hidden'>MyNotes</h1>
 
         {/* Search bar */}
         <div className="relative">
           <input
             type="text"
             placeholder="Search notes..."
-            className="pl-10 pr-4 py-2 border border-gray-600 rounded-md md:w-96 sm:w-56 text-gray-600"
+            className="pl-10 pr-4 py-2 border border-gray-600 rounded-md w-96 min-w-32 text-gray-600"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />

@@ -4,9 +4,9 @@ function NavBar({ search, setSearch }) {
   const navigate = useNavigate();
 
   return (
-    <nav className='flex items-center justify-center py-4 bg-gray-100 shadow-lg z-10 fixed top-0 left-0 w-full'>
-      <div className='flex justify-between items-center w-full mx-10'>
-        <h1 className='text-2xl font-bold text-gray-600 md:inline sm:hidden'>MyNotes</h1>
+    <nav className='flex items-center justify-center py-2.5 bg-gray-100 shadow-lg z-10 fixed top-0 left-0 w-full'>
+      <div className='flex-col sm:flex gap-2 justify-between items-center w-full mx-10'>
+        <h1 className='text-2xl font-bold text-gray-600 sm:inline hidden'>MyNotes</h1>
 
         {/* Search bar */}
         <div className="relative">

@@ -50,7 +50,7 @@ function Home() {
       />
 
       <div className='flex items-center flex-col min-h-screen bg-gray-100 pt-24 pb-14'>
-        <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-4 max-w-3xl h-fit auto-rows-min px-4'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl h-fit auto-rows-min px-4'>
           {notes.length > 0 ? (
             notes.map((note) => (
               <NoteCard

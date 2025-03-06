@@ -9,11 +9,11 @@ function NavBar({ search, setSearch }) {
         <h1 className='text-2xl font-bold text-gray-600 md:inline hidden'>MyNotes</h1>
 
         {/* Search bar */}
-        <div className="relative w-96 flex-initial">
+        <div className="relative">
           <input
             type="text"
             placeholder="Search notes..."
-            className="pl-10 pr-4 py-2 border border-gray-600 rounded-md w-fill min-w-32 text-gray-600"
+            className="pl-10 pr-4 py-2 border border-gray-600 rounded-md w-96 flex-initial text-gray-600"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />

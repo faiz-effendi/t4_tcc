@@ -12,7 +12,7 @@ function NoteCard({ owner, title, content, noteId, onDelete }) {
     <div className="relative w-fill max-w-2xl flex flex-col min-h-56 h-full justify-between items-start space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6 px-4 py-8 border-2 border-dashed border-gray-400 dark:border-gray-400 shadow-lg rounded-lg">
       
       <div className="w-full flex justify-center sm:justify-start sm:w-auto">
-        <img className="object-cover w-20 h-20 mt-3 mr-3 rounded-full" src="../public/zuck.jpg" />
+        <img className="object-cover w-20 h-20 mt-3 mr-3 rounded-full" src="/zuck.jpg" />
       </div>
 
       <div className="w-full max-w-11/12 flex flex-col sm:items-start h-full justify-between">

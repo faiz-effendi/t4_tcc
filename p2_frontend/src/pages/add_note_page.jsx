@@ -20,7 +20,7 @@ function AddNote() {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent page reload
     await axios
-      .post("http://localhost:5000/notes", formData)
+      .post("http://35.224.17.65:3001/notes", formData)
       .then((response) => {
         setResponse(response.data);
         console.log("Success:", res.data);
